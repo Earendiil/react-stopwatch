@@ -1,0 +1,65 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(222, 215, 215);
+}
+.stopwatch1{
+  background-color: blueviolet;
+}
+
+.stopwatch{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid;
+  border-radius: 50px;
+  padding: 30px;
+  background-color: antiquewhite;
+}
+.stopwatch1{
+  background-color: blueviolet;
+}
+.stopwatch2{
+  background-color: rgb(220, 226, 43);
+}
+.stopwatch3{
+  background-color: rgba(242, 122, 18, 0.829);
+}
+
+.display{
+  font-size: 5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: rgb(36, 32, 32);
+  text-shadow: 2px 2px 2px rgba(54, 53, 53, 0.435);
+}
+.controls button{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 5px;
+  min-width: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(152, 75, 224);
+  transition: background-color 0.5s ease;
+}
+.start-button{
+  background-color: rgb(50, 219, 50);
+}
+.start-button:hover{
+  background-color: rgb(41, 179, 41);
+}
+.stop-button{
+  background-color: rgb(241, 37, 37);
+}
+.stop-button:hover{
+  background-color: rgb(196, 30, 30);
+}
+.reset-button{
+  background-color: rgba(35, 121, 233, 0.86);
+}
+.reset-button:hover{
+  background-color: rgba(14, 14, 161, 0.86);
+}
