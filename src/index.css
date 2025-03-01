@@ -2,11 +2,9 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(222, 215, 215);
+  background-color: rgba(201, 136, 112, 0.945);
 }
-.stopwatch1{
-  background-color: blueviolet;
-}
+
 
 .stopwatch{
   display: flex;
@@ -15,7 +13,7 @@ body{
   border: 5px solid;
   border-radius: 50px;
   padding: 30px;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 .stopwatch1{
   background-color: blueviolet;
@@ -62,4 +60,10 @@ body{
 }
 .reset-button:hover{
   background-color: rgba(14, 14, 161, 0.86);
+}
+.lap-button {
+  background-color: rgb(168, 22, 181);
+}
+.lap-button:hover {
+  background-color: rgb(121, 16, 131);
 }

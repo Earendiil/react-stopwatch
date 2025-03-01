@@ -5,6 +5,7 @@ function Stopwatch({ className, playerName }) {
   const [elapsedTime, setElapsedTime] = useState(0);
   const intervalIdRef = useRef(null);
   const startTimeRef = useRef(0);
+  const [laps, setLaps] = useState([]);
 
   useEffect(() => {
     if (isRunning) {
@@ -28,6 +29,10 @@ function Stopwatch({ className, playerName }) {
   function reset() {
     setElapsedTime(0);
     setIsRunning(false);
+    setLaps([]);
+  }
+  function addLap(){
+    setLaps([...laps, formatTime()]);
   }
 
   function formatTime() {
@@ -49,6 +54,12 @@ function Stopwatch({ className, playerName }) {
         <button className="start-button" onClick={start}>Start</button>
         <button className="stop-button" onClick={stop}>Stop</button>
         <button className="reset-button" onClick={reset}>Reset</button>
+        <button className="lap-button" onClick={addLap}>Lap</button>
+        <ul>
+            {laps.map((lap, index) => (
+              <li key={index}>Lap {index +1} : {lap}</li>
+            ))}
+        </ul>
       </div>
     </div>
   );
