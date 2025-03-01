@@ -6,6 +6,9 @@ function Stopwatch({ className, playerName }) {
   const intervalIdRef = useRef(null);
   const startTimeRef = useRef(0);
   const [laps, setLaps] = useState([]);
+  const [isCountdown, setIsCountdown] = useState(false);
+  
+
 
   useEffect(() => {
     if (isRunning) {
@@ -34,6 +37,10 @@ function Stopwatch({ className, playerName }) {
   function addLap(){
     setLaps([...laps, formatTime()]);
   }
+  function toggleMode(){
+    setIsCountdown(prev => !prev);
+  }
+  
 
   function formatTime() {
     // Convert milliseconds to minutes, seconds, and milliseconds
@@ -47,6 +54,7 @@ function Stopwatch({ className, playerName }) {
   
 
   return (
+    
     <div className={`stopwatch ${className}`}>
       <h2>{playerName}</h2> 
       <div className="display">{formatTime()}</div>
@@ -60,7 +68,11 @@ function Stopwatch({ className, playerName }) {
               <li key={index}>Lap {index +1} : {lap}</li>
             ))}
         </ul>
+        <button onClick={toggleMode}>
+          {isCountdown? "Switch to Stopwatch" : "Switch to Countdown"}
+        </button>
       </div>
+      
     </div>
   );
 }

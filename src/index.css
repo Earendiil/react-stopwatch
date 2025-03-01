@@ -1,69 +1,155 @@
-body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(201, 136, 112, 0.945);
+
+.light-theme {
+  background-color: rgba(227, 136, 103, 0.945); 
+  color: #222;
+  transition: all 0.3s ease-in-out;
 }
 
 
-.stopwatch{
+.dark-theme {
+  background-color: #222; 
+  color: rgba(240, 240, 233, 0.767);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Apply theme background to the whole page */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+body.light-theme {
+  background-color: rgba(231, 166, 142, 0.945);
+  transition: background-color 0.3s ease-in-out;
+}
+
+body.dark-theme {
+  background-color: #121212; 
+}
+
+
+.stopwatch {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 5px solid;
   border-radius: 50px;
   padding: 30px;
-  /* background-color: antiquewhite; */
+  transition: background-color 0.3s ease-in-out;
 }
-.stopwatch1{
+
+
+.stopwatch1 {
   background-color: blueviolet;
 }
-.stopwatch2{
+.stopwatch2 {
   background-color: rgb(220, 226, 43);
 }
-.stopwatch3{
+.stopwatch3 {
   background-color: rgba(242, 122, 18, 0.829);
 }
 
-.display{
+
+.display {
   font-size: 5rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: rgb(36, 32, 32);
   text-shadow: 2px 2px 2px rgba(54, 53, 53, 0.435);
 }
-.controls button{
+
+
+.controls button {
   font-size: 1.5rem;
   font-weight: bold;
   padding: 10px 20px;
   margin: 5px;
-  min-width: none;
   border-radius: 10px;
   cursor: pointer;
-  color: rgb(152, 75, 224);
-  transition: background-color 0.5s ease;
+  transition: background-color 0.3s ease-in-out;
 }
-.start-button{
+
+
+.light-theme .controls .start-button {
   background-color: rgb(50, 219, 50);
+  color: white;
 }
-.start-button:hover{
-  background-color: rgb(41, 179, 41);
+.light-theme .controls .start-button:hover {
+  background-color: rgb(31, 133, 31);
+  color: white;
 }
-.stop-button{
-  background-color: rgb(241, 37, 37);
+.light-theme .controls .stop-button {
+  background-color: rgb(233, 58, 58);
+  color: white;
 }
-.stop-button:hover{
-  background-color: rgb(196, 30, 30);
+.light-theme .controls .stop-button:hover {
+  background-color: rgba(160, 18, 18, 0.952);
+  color: white;
 }
-.reset-button{
-  background-color: rgba(35, 121, 233, 0.86);
+.light-theme .controls .reset-button {
+  background-color: rgba(95, 148, 217, 0.86);
+  color: white;
 }
-.reset-button:hover{
-  background-color: rgba(14, 14, 161, 0.86);
+.light-theme .controls .reset-button:hover {
+  background-color: rgba(23, 81, 157, 0.86);
+  color: white;
 }
-.lap-button {
-  background-color: rgb(168, 22, 181);
+.light-theme .controls .lap-button {
+  background-color: rgb(192, 33, 207);
+  color: white;
 }
-.lap-button:hover {
-  background-color: rgb(121, 16, 131);
+.light-theme .controls .lap-button:hover {
+  background-color: rgb(113, 15, 122);
+  color: white;
+}
+
+
+.dark-theme .controls .start-button {
+  background-color: rgb(50, 219, 50);
+  color: white;
+}
+.dark-theme .controls .start-button:hover {
+  background-color: rgb(31, 133, 31);
+  color: white;
+}
+.dark-theme .controls .stop-button {
+  background-color: rgb(233, 58, 58);
+  color: white;
+}
+.dark-theme .controls .stop-button:hover {
+  background-color: rgba(160, 18, 18, 0.952);
+  color: white;
+}
+.dark-theme .controls .reset-button {
+  background-color: rgba(95, 148, 217, 0.86);
+  color: white;
+}
+.dark-theme .controls .reset-button:hover {
+  background-color: rgba(23, 81, 157, 0.86);
+  color: white;
+}
+.dark-theme .controls .lap-button {
+  background-color: rgb(192, 33, 207);
+  color: white;
+}
+.dark-theme .controls .lap-button:hover {
+  background-color: rgb(113, 15, 122);
+  color: white;
+}
+
+
+
+
+.dark-theme button {
+  background-color: #adaaaa;
+  color: #222;
+}
+
+.light-theme button {
+  background-color: transparent;
+  color: #222;
 }
